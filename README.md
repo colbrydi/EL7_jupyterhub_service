@@ -1,6 +1,6 @@
-Some neighbors on the gitter jupyterhub chat room asked for my scripts to set up jupyterhub as a service in CentOS7. Please note that I am not an expert at jupyterhub or CentOS7 so there may be a better way to do this. Please feel free to use at your own risk.   
+Some neighbors on the gitter jupyterhub chat room asked for my scripts to set up jupyterhub as a service in CentOS7. Please note that I am not an expert at jupyterhub nor CentOS7 so there may be a better way to do this. Please feel free to use at your own risk.   
 
-My current Jupyterhub vagrent repository is a mess so I pulled out just the setup scripts so I could just post the requested files. I typically run the install.sh script as root.
+My current Jupyterhub vagrent repository is a mess so I pulled out just the setup scripts so I could just post the requested files. I typically run the install.sh script as root.  
 
 This script assumes that anaconda3 is installed in the following location:
 /opt/anaconda3/bin/
