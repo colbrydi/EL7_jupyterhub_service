@@ -1,0 +1,24 @@
+#README:anaconda3
+# FROM: https://gist.github.com/amitsaha/6658720
+# Copy this file to /usr/lib/systemd/system/
+# sudo systemctl daemon-reload
+# systemctl enable ipython-notebook 
+# systemctl start ipython-notebook
+# The #WorkingDirectory and ipython-dir must exist
+# If you don't want anything fancy, go to http://127.0.0.1:8888 to see your notebook
+# wheneber you want it
+ 
+[Unit]
+Description=JupyterHub
+ 
+[Service]
+Type=simple
+PIDFile=/var/run/jupyterhub.pid
+ExecStart=/etc/jupyterhub/jupyterhub_start.sh 
+User=jupyter_usr
+Group=shadow
+WorkingDirectory=/etc/jupyterhub/ 
+
+ 
+[Install]
+WantedBy=multi-user.target
