@@ -7,9 +7,9 @@ This script assumes that anaconda3 is installed in the following location:
 
 I think you will be most interested in the following files:
 
-#jupyterhub_start.sh# -- This is just a wrapper script that I use to set the appropriate path and call jupyterhub. Change to use your path to jupyterhub and your settings (for example, you may want to remove the sudospawner argument if you are not using that option and/or use a jupyterhub_config.py file instead). In my VM I run jupyterhub service from the /etc/jupyterhub directory. This is where you will want to put this wrapper script and any configuration files you have.  
+**jupyterhub_start.sh** -- This is just a wrapper script that I use to set the appropriate path and call jupyterhub. Change to use your path to jupyterhub and your settings (for example, you may want to remove the sudospawner argument if you are not using that option and/or use a jupyterhub_config.py file instead). In my VM I run jupyterhub service from the /etc/jupyterhub directory. This is where you will want to put this wrapper script and any configuration files you have.  
 
-#jupyterhub.service# -- This file is the systemctl file you need. A copy of this goes in  /usr/lib/systemd/system/ .  You want to rewrite it to point to your jupyterhub_start.sh script. If you put jupyerhub_start.sh in /etc/jupyterhub you probably don't need to rewrite it.
+**jupyterhub.service** -- This file is the systemctl file you need. A copy of this goes in  /usr/lib/systemd/system/ .  You want to rewrite it to point to your jupyterhub_start.sh script. If you put jupyerhub_start.sh in /etc/jupyterhub you probably don't need to rewrite it.
 
 You should also check to make sure the User and Group fields are appropriate for your setup.
 
